@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Loading, RouteHeader } from '../../components';
 import PlaylistItem from './PlaylistItem';

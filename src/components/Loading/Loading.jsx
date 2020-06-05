@@ -5,7 +5,7 @@ import './Loading.scss';
 
 const Loading = ({ text }) => (
   <React.Fragment>
-    <div className="loading">
+    <div className="loading" data-testid="loading">
       <span />
       <span />
       <span />

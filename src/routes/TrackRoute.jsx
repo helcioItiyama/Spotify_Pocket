@@ -10,7 +10,7 @@ import {
 } from '../actions';
 
 import { endpoints } from '../modules/endpoints';
-import { getContentNamesById } from '../modules/helpers';
+import { getContentNameById } from '../modules/helpers';
 import { request, sanitizeUrl } from '../modules/request';
 
 import { Tracks } from '../containers';
@@ -44,7 +44,7 @@ const TracksRoute = ({path}) => {
 
   return (
     <Tracks
-      categoryName={getContentNamesById(playlistId, contentReducer.playlistId)}
+      categoryName={getContentNameById(playlistId, contentReducer.playlistId)}
       data={contentReducer.tracks}
       isLoading={contentReducer.status==='running'}
       path={path}

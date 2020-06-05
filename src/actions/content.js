@@ -24,7 +24,7 @@ export const getCategoryPlaylistRequest = () => ({
 });
 
 export const getCategoryPlaylistSuccess = ({ playlists }) => ({
-  type: contentTypes.GET_PLAYLIST_TRACKS_SUCCESS,
+  type: contentTypes.GET_CATEGORY_PLAYLIST_SUCCESS,
   payload: playlists.items,
 });
 

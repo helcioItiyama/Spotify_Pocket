@@ -12,7 +12,7 @@ import {
 import { Playlists } from '../containers';
 
 import { endpoints } from '../modules/endpoints';
-import { getContentNamesById } from '../modules/helpers';
+import { getContentNameById } from '../modules/helpers';
 import { request, sanitizeUrl } from '../modules/request';
 
 const { getCategoryPlaylists } = endpoints;
@@ -45,7 +45,7 @@ const PlaylistsRoute = ({path}) => {
   return (
     <Playlists
       categoryId={categoryId}
-      categoryName={getContentNamesById(categoryId, contentReducer.categories)}
+      categoryName={getContentNameById(categoryId, contentReducer.categories)}
       data={contentReducer.playlists}
       isLoading={contentReducer.status === 'running' && contentReducer.playlists.length === 0}
       path={path}

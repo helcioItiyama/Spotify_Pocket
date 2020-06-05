@@ -2,7 +2,7 @@ import contentTypes from '../types/contentTypes';
 
 const initialState = {
   categories: [],
-  playlist: [],
+  playlists: [],
   tracks: [],
   playingNowId: null,
   playingNowTrack: null,
@@ -46,7 +46,7 @@ const contentReducer = (state=initialState, {type, payload}) => {
     case contentTypes.GET_CATEGORY_PLAYLIST_REQUEST:
       return {
         ...state,
-        playlist: [],
+        playlists: [],
         status: 'running',
       };
 
@@ -54,7 +54,7 @@ const contentReducer = (state=initialState, {type, payload}) => {
       return {
         ...state,
         errorMessage: '',
-        playlist: payload,
+        playlists: payload,
         status: 'success',
       };
 
@@ -62,7 +62,7 @@ const contentReducer = (state=initialState, {type, payload}) => {
       return {
         ...state,
         errorMessage: payload.message,
-        playlist: [],
+        playlists: [],
         status: 'error',
       };
 

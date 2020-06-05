@@ -32,7 +32,7 @@ const DashboardRoute = () => {
       ...getUserProfile.options,
       headers: {'Authorization': `Bearer ${authReducer.accessToken}`}
     }
-
+    
     dispatch(getUserRequest());
 
     request(getUserProfile.url, requestOptions)
